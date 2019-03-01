@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security" 
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/whale/images/vinci_logo_en.png" type="image/x-icon"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/material-design-iconic-font.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link type="text/css" rel="stylesheet" href="/whale/css/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/animate.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/layout.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/components.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/widgets.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/plugins.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/pages.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/bootstrap-extend.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/common.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/responsive.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/bootstrap-timepicker.min.css"/>
+
+
+
+<link type="text/css" rel="stylesheet" href="/whale/css/style-custom.css"/>
+<link type="text/css" rel="stylesheet" href="/whale/css/jquery.fancybox.css"/>
+
+<script src="/whale/js/lib/jquery.js"></script>
+<script src="/whale/js/lib/jquery-migrate.js"></script>
+<script src="/whale/js/lib/bootstrap.js"></script>
+<script src="/whale/js/lib/jquery.ui.js"></script>
+<script src="/whale/js/lib/jRespond.js"></script>
+<script src="/whale/js/lib/nav.accordion.js"></script>
+<script src="/whale/js/lib/hover.intent.js"></script>
+<script src="/whale/js/lib/hammerjs.js"></script>
+<script src="/whale/js/lib/jquery.hammer.js"></script>
+<script src="/whale/js/lib/jquery.fitvids.js"></script>
+<script src="/whale/js/lib/scrollup.js"></script>
+<script src="/whale/js/lib/smoothscroll.js"></script>
+<script src="/whale/js/lib/jquery.slimscroll.js"></script>
+<script src="/whale/js/lib/jquery.syntaxhighlighter.js"></script>
+<!-- <script src="/whale/js/lib/velocity.js"></script>
+<script src="/whale/js/lib/jquery-jvectormap.js"></script>
+<script src="/whale/js/lib/jquery-jvectormap-world-mill.js"></script>
+<script src="/whale/js/lib/jquery-jvectormap-us-aea.js"></script> -->
+
+<script src="/whale/js/lib/smart-resize.js"></script>
+
+<!--iCheck-->
+<script src="/whale/js/lib/icheck.js"></script>
+<script src="/whale/js/lib/jquery.switch.button.js"></script>
+<!--Forms-->
+<script src="/whale/js/lib/sweetalert.js"></script>
+<script src="/whale/js/lib/jquery.maskedinput.js"></script>
+<script src="/whale/js/lib/jquery.validate.js"></script>
+<script src="/whale/js/lib/jquery.form.js"></script>
+<script src="/whale/js/lib/additional-methods.js"></script>
+<script src="/whale/js/lib/jquery-cloneya.js"></script>
+<script src="/whale/js/lib/j-forms.js"></script>
+<script src="/whale/js/lib/jquery.loadmask.js"></script>
+
+<script src="/whale/js/lib/bootstrap-datepicker.js"></script>
+<script src="/whale/js/lib/moment.js"></script>
+<script src="/whale/js/lib/daterangepicker.js"></script>
+<script src="/whale/js/lib/bootstrap-timepicker.min.js"></script>
+
+<script type="text/javascript" src="/whale/js/loadingoverlay.js"></script>
+
+<script src="/whale/js/lib/select2.full.js"></script>
+
+<!-- <script src="/whale/js//highcharts.js"></script>
+<script src="/whale/js/exporting.js"></script> -->
+<script src="/whale/js/lib/jquery.fancybox.js"></script>
+<script src="/whale/js/lib/jquery.fancybox.pack.js"></script>
+
+<script src="/whale/js/lib/colorpicker.js"></script>
+<script src="/whale/js/apps.js"></script>
+<script src="/whale/js/common.js"></script>
+<script src="/whale/js/lib/form-validation.js"></script>
+
+<style>
+body, html {
+  height: 100%;
+}
+.main-container .content-box{
+	margin-bottom:80px;
+}
+
+.footer-container {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   z-index:6;
+	margin-right:0!important;
+	margin-left:0!important;
+}
+.footer-container .container-fluid{
+	margin-left:250px;
+	
+}
+body.isMobile .footer-container .container-fluid {
+    margin-left: 0!important;
+}
+ul.list-accordion li.active a {
+    text-decoration: none;
+    color: #00a0e3!important;
+}
+ul.list-accordion li.active a {
+    text-decoration: none;
+    color: #00a0e3!important;
+    background-color:rgba(0, 0, 0, 0.08)!important;
+}
+</style>
+</head>
+<body class="leftbar-view">
+<header th:replace="~{fragments/header :: header}">
+ 
+</header>
+<aside th:replace="~{fragments/left :: aside}"></aside>
+<section class="main-container">
+ 	<div class="container-fluid content-box">
+ 		
+		<div id="action" th:attr="data-confirm=#{action.confirm},data-cancel=#{action.cancel},data-save=#{action.save}"></div>
+		<div id="errmsg" th:attr="data-required=#{error.field.required}"></div>
+		<div id="confirm_note" th:attr="data-note=#{action.delete.note}"></div>
+ 		<div th:replace="~{fragments/breadcrumbs :: div}"></div>
+ 		<div id="content" layout:fragment="content"></div>
+ 	</div>
+</section>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

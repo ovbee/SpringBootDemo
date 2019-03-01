@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+<style>
+body, html {
+  height: 100%;
+}
+.main-container .content-box{
+	margin-bottom:80px;
+}
+
+.footer-container {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   z-index:6;
+	margin-right:0!important;
+	margin-left:0!important;
+}
+.footer-container .container-fluid{
+	margin-left:250px;
+	
+}
+body.isMobile .footer-container .container-fluid {
+    margin-left: 0!important;
+}
+ul.list-accordion li.active a {
+    text-decoration: none;
+    color: #00a0e3!important;
+}
+ul.list-accordion li.active a {
+    text-decoration: none;
+    color: #00a0e3!important;
+    background-color:rgba(0, 0, 0, 0.08)!important;
+}
+</style>
+</head>
+<body>
+<div id="content" layout:fragment="content"></div>
+</body>
+</html>
